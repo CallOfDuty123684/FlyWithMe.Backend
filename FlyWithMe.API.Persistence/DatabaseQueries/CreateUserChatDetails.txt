@@ -1,0 +1,14 @@
+﻿create table UserChatDetails(
+ChatId bigint not null,
+UserId bigint not null,
+UserChatRequest varchar,
+UserChatResponse varchar,
+CreatedDate timestamp default now(),
+primary key(ChatId),
+FOREIGN KEY (UserId)
+      REFERENCES UserMaster (UserId)
+);
+
+ALTER TABLE UserChatDetails 
+
+    ALTER ChatId ADD GENERATED ALWAYS AS IDENTITY 

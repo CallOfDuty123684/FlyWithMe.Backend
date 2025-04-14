@@ -1,0 +1,14 @@
+﻿create table UserMaster(
+UserId bigint not null,
+FirstName varchar(200),
+LastName varchar(200),
+FullName varchar(200),
+EmailId varchar(200),
+CreatedOn timestamp default now(),
+LastLoginDate timestamp,
+primary key(UserId)
+)
+
+ALTER TABLE UserMaster 
+
+    ALTER UserId ADD GENERATED ALWAYS AS IDENTITY 
